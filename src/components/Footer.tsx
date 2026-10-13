@@ -17,14 +17,18 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab, onOpenChecklist, on
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
           {/* Column 1: Brand & Founder Story */}
           <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full border border-[#C5A059] flex items-center justify-center bg-[#123320] text-[#C5A059] font-serif font-bold text-lg">
+            <button
+              onClick={() => onSelectTab('home')}
+              className="flex items-center gap-3 text-left cursor-pointer group focus:outline-none"
+              title="Return to Home"
+            >
+              <div className="w-10 h-10 rounded-full border border-[#C5A059] flex items-center justify-center bg-[#123320] text-[#C5A059] font-serif font-bold text-lg group-hover:scale-105 transition-transform">
                 RG
               </div>
-              <span className="font-serif text-2xl font-bold tracking-wide text-[#FAF7F2]">
+              <span className="font-serif text-2xl font-bold tracking-wide text-[#FAF7F2] group-hover:text-[#C5A059] transition-colors">
                 ROSHAL GARDEN
               </span>
-            </div>
+            </button>
 
             <p className="text-xs sm:text-sm text-white/70 leading-relaxed font-light">
               Founded by <strong className="text-[#D8B775] font-semibold">{venueConfig.brandStory.founder}</strong> after 25 years in England, blending classic British landscape sophistication with grand Indian hospitality.
@@ -74,6 +78,14 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab, onOpenChecklist, on
               Explore Venue
             </h4>
             <ul className="space-y-2.5 text-xs sm:text-sm text-white/80">
+              <li>
+                <button
+                  onClick={() => onSelectTab('home')}
+                  className="hover:text-[#C5A059] transition-colors cursor-pointer font-medium text-white"
+                >
+                  Home & Overview
+                </button>
+              </li>
               <li>
                 <button
                   onClick={() => onSelectTab('weddings')}

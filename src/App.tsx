@@ -30,12 +30,14 @@ export default function App() {
   const [selectedEventType, setSelectedEventType] = useState<string>('Wedding & Reception');
   const [checklistOpen, setChecklistOpen] = useState<boolean>(false);
 
-  // Sync hash if user navigates via browser URL
+  // Ensure 'home' is always the primary default view when site is opened or refreshed
   useEffect(() => {
     const handleHashChange = () => {
-      const hash = window.location.hash.replace('#', '');
-      if (['home', 'weddings', 'events', 'catering', 'packages', 'gallery', 'about', 'contact'].includes(hash)) {
+      const hash = window.location.hash.replace('#', '').trim().toLowerCase();
+      if (['weddings', 'events', 'catering', 'packages', 'gallery', 'about', 'contact'].includes(hash)) {
         setCurrentTab(hash);
+      } else {
+        setCurrentTab('home');
       }
     };
     handleHashChange();
@@ -44,8 +46,15 @@ export default function App() {
   }, []);
 
   const handleSelectTab = (tab: string) => {
-    setCurrentTab(tab);
-    window.location.hash = tab === 'home' ? '' : tab;
+    const targetTab = tab.trim().toLowerCase();
+    setCurrentTab(targetTab);
+    if (targetTab === 'home') {
+      if (window.location.hash) {
+        window.history.pushState(null, '', window.location.pathname + window.location.search);
+      }
+    } else {
+      window.location.hash = targetTab;
+    }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 

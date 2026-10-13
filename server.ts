@@ -3,6 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
 
+process.env.DISABLE_HMR = 'true';
 dotenv.config();
 
 const __filename = fileURLToPath(import.meta.url);

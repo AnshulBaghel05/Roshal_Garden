@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100%" height="100%">
+  <defs>
+    <linearGradient id="forestGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A1C12"/>
+      <stop offset="50%" stop-color="#123320"/>
+      <stop offset="100%" stop-color="#07140D"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F2D396"/>
+      <stop offset="50%" stop-color="#C5A059"/>
+      <stop offset="100%" stop-color="#9E7A32"/>
+    </linearGradient>
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#C5A059" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background Medallion -->
+  <rect x="4" y="4" width="120" height="120" rx="32" fill="url(#forestGrad)" stroke="url(#goldGrad)" stroke-width="4"/>
+  
+  <!-- Inner Delicate Filigree Border -->
+  <rect x="12" y="12" width="104" height="104" rx="24" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" stroke-opacity="0.6" stroke-dasharray="3 3"/>
+
+  <!-- Botanical Leaf / Crown Flourish at Top -->
+  <path d="M64 22 C67 26 73 28 78 28 C73 30 68 32 64 36 C60 32 55 30 50 28 C55 28 61 26 64 22 Z" fill="url(#goldGrad)"/>
+  <circle cx="64" cy="20" r="2.5" fill="#FAF7F2"/>
+
+  <!-- Monogram RG -->
+  <!-- Letter R -->
+  <path d="M42 42 H56 C64 42 69 46 69 52 C69 57 65 60 59 61 L70 82 H60 L51 63 H49 V82 H42 V42 Z M49 48 V57 H55 C59 57 62 55 62 52 C62 49 59 48 55 48 H49 Z" fill="url(#goldGrad)" filter="url(#goldGlow)"/>
+
+  <!-- Letter G -->
+  <path d="M88 56 C86 48 79 43 71 43 C59 43 53 53 53 64 C53 75 60 84 72 84 C81 84 86 79 88 71 H72 V65 H94 V80 C89 87 81 90 71 90 C55 90 45 78 45 64 C45 50 56 37 72 37 C82 37 91 43 94 53 L88 56 Z" fill="url(#goldGrad)" opacity="0.95" filter="url(#goldGlow)"/>
+
+  <!-- Botanical Base Flourish -->
+  <path d="M48 98 C54 96 60 96 64 100 C68 96 74 96 80 98 C74 100 68 100 64 97 C60 100 54 100 48 98 Z" fill="url(#goldGrad)" opacity="0.8"/>
+  <circle cx="64" cy="103" r="1.5" fill="url(#goldGrad)"/>
+</svg>
