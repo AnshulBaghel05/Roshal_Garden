@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  
+  --color-forest-950: #0A1C12;
+  --color-forest-900: #123320;
+  --color-forest-800: #19452C;
+  --color-forest-700: #22593A;
+  
+  --color-gold-600: #A88339;
+  --color-gold-500: #C5A059;
+  --color-gold-400: #D8B775;
+  --color-gold-300: #E6CE9D;
+  --color-gold-100: #F7F1E5;
+
+  --color-cream-50: #FAF7F2;
+  --color-cream-100: #F4EFE6;
+  --color-cream-200: #EAE2D5;
+  
+  --color-charcoal-900: #1A1F1C;
+  --color-charcoal-700: #333D37;
+  --color-charcoal-500: #5C6A62;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #C5A059;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A88339;
+}
+
+/* Print styles for Menu / Brochure download */
+@media print {
+  header, footer, .no-print, button, nav {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
