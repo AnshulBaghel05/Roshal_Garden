@@ -31,8 +31,11 @@ export const AboutView: React.FC<AboutViewProps> = ({ onOpenEnquiry }) => {
           <div className="lg:col-span-5 relative">
             <div className="relative rounded-2xl overflow-hidden aspect-[4/5] shadow-lg bg-stone-100 border border-[#EAE2D5]">
               <img
-                src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&w=800&q=80"
+                src="/images/english_garden.jpg"
                 alt="English garden walkway and estate landscaping at Roshal Garden"
+                loading="lazy"
+                decoding="async"
+                referrerPolicy="no-referrer"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0A1C12]/90 via-transparent to-transparent" />

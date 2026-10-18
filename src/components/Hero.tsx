@@ -13,10 +13,12 @@ export const Hero: React.FC<HeroProps> = ({ onOpenEnquiry, onNavigatePackages })
       {/* Background Photography with Sophisticated Dark Vignette Gradient */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1920&q=85"
+          src="/images/hero_wedding_lawn.jpg"
           alt="Roshal Garden wedding lawn and evening banquet illumination in Bhosari Pune"
           className="w-full h-full object-cover object-center filter brightness-[0.42] scale-105 transform motion-safe:transition-transform motion-safe:duration-1000"
           loading="eager"
+          fetchPriority="high"
+          decoding="async"
         />
         {/* Architectural Radial Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#0A1C12] via-[#0A1C12]/60 to-transparent" />

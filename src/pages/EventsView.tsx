@@ -27,7 +27,7 @@ export const EventsView: React.FC<EventsViewProps> = ({ onOpenEnquiry }) => {
     birthday: {
       title: 'Birthday Parties, Sangeet & Milestones',
       subtitle: 'Fun, Music, Dynamic DJ Stage & Vibrant Ambience',
-      image: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1200&q=80',
+      image: '/images/banquet_hall.jpg',
       capacity: '100 to 400 Guests',
       areaUsed: '3,000 sq ft AC Banquet Hall or Garden Veranda',
       highlights: [
@@ -41,7 +41,7 @@ export const EventsView: React.FC<EventsViewProps> = ({ onOpenEnquiry }) => {
     corporate: {
       title: 'Corporate Galas, Awards & Seminars',
       subtitle: 'Prestigious Corporate Hospitality in Bhosari Industrial Hub',
-      image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80',
+      image: '/images/corporate_conference.jpg',
       capacity: '100 to 500 Delegates',
       areaUsed: 'Banquet Hall + Dining Veranda',
       highlights: [
@@ -55,7 +55,7 @@ export const EventsView: React.FC<EventsViewProps> = ({ onOpenEnquiry }) => {
     college: {
       title: 'College Gatherings, Fests & Reunions',
       subtitle: 'Safe, Expansive Open Turf for Cultural Youth Celebrations',
-      image: 'https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=1200&q=80',
+      image: '/images/college_fest.jpg',
       capacity: '300 to 1,000 Students & Alumni',
       areaUsed: '18,000 sq ft Open Lawn',
       highlights: [
@@ -197,6 +197,8 @@ export const EventsView: React.FC<EventsViewProps> = ({ onOpenEnquiry }) => {
             <img
               src={current.image}
               alt={current.title}
+              loading="lazy"
+              decoding="async"
               referrerPolicy="no-referrer"
               className="w-full h-full object-cover"
             />

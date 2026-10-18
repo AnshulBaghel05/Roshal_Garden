@@ -79,8 +79,11 @@ export const WeddingsView: React.FC<WeddingsViewProps> = ({ onOpenEnquiry }) => 
 
           <div className="relative rounded-2xl overflow-hidden aspect-[4/3] shadow-md">
             <img
-              src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=80"
+              src="/images/hero_wedding_lawn.jpg"
               alt="Roshal Garden Wedding Mandap and Lawn"
+              loading="lazy"
+              decoding="async"
+              referrerPolicy="no-referrer"
               className="w-full h-full object-cover"
             />
             <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-[#0A1C12]/80 backdrop-blur-md text-white border border-white/20 text-xs">

@@ -13,7 +13,7 @@ export const VenueHighlights: React.FC<VenueHighlightsProps> = ({ onSelectEventT
       id: 'wedding',
       title: 'Royal Weddings & Varmala',
       category: 'Weddings',
-      image: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80',
+      image: '/images/hero_wedding_lawn.jpg',
       description: 'Lush 18,000 sq ft lawn for open-air mandaps under the stars, plus majestic guest dining.',
       capacity: 'Up to 1,200+ guests'
     },
@@ -29,7 +29,7 @@ export const VenueHighlights: React.FC<VenueHighlightsProps> = ({ onSelectEventT
       id: 'sangeet',
       title: 'Sangeet, Haldi & Birthdays',
       category: 'Celebrations',
-      image: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80',
+      image: '/images/banquet_hall.jpg',
       description: 'Air-conditioned 3,000 sq ft hall perfect for DJ dance floors, sound setups, and intimate dining.',
       capacity: '150 to 350 guests'
     },
@@ -37,7 +37,7 @@ export const VenueHighlights: React.FC<VenueHighlightsProps> = ({ onSelectEventT
       id: 'corporate',
       title: 'Corporate Galas & Seminars',
       category: 'Corporate',
-      image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80',
+      image: '/images/corporate_conference.jpg',
       description: 'Prime connectivity along Bhosari industrial hub. Acoustic hall, presentation staging & dining.',
       capacity: '100 to 450 delegates'
     },
@@ -45,7 +45,7 @@ export const VenueHighlights: React.FC<VenueHighlightsProps> = ({ onSelectEventT
       id: 'college',
       title: 'College Fests & Youth Meets',
       category: 'Youth & Alumni',
-      image: 'https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=800&q=80',
+      image: '/images/college_fest.jpg',
       description: 'Sprawling secure green grounds for cultural annual gatherings, farewells, and reunions.',
       capacity: 'Up to 1,000 guests'
     },
@@ -53,7 +53,7 @@ export const VenueHighlights: React.FC<VenueHighlightsProps> = ({ onSelectEventT
       id: 'restaurant',
       title: 'On-Site Garden Restaurant',
       category: 'Dining',
-      image: 'https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=800&q=80',
+      image: '/images/buffet_dining.jpg',
       description: 'Distinct family dining facility for authentic regional & tandoori cuisine without event overlap.',
       capacity: 'Table reservations daily'
     }
@@ -180,6 +180,7 @@ export const VenueHighlights: React.FC<VenueHighlightsProps> = ({ onSelectEventT
                       src={event.image}
                       alt={event.title}
                       loading="lazy"
+                      decoding="async"
                       referrerPolicy="no-referrer"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />

@@ -14,14 +14,8 @@ interface ReviewProps {
 }
 
 export const ReviewCard: React.FC<ReviewProps> = ({ review }) => {
-  const isPlaceholder = review.author.includes('[ADD REVIEW');
-
   return (
-    <div className={`p-6 rounded-2xl flex flex-col justify-between transition-all ${
-      isPlaceholder
-        ? 'bg-[#FAF7F2] border-2 border-dashed border-[#C5A059]/50'
-        : 'bg-white border border-[#EAE2D5] shadow-xs hover:shadow-md'
-    }`}>
+    <div className="p-6 rounded-2xl flex flex-col justify-between transition-all bg-white border border-[#EAE2D5] shadow-xs hover:shadow-md">
       <div>
         {/* Rating stars & Source */}
         <div className="flex items-center justify-between mb-3">
@@ -42,9 +36,7 @@ export const ReviewCard: React.FC<ReviewProps> = ({ review }) => {
         </div>
 
         {/* Review Quote */}
-        <p className={`text-sm leading-relaxed mb-4 ${
-          isPlaceholder ? 'text-[#8C6D2D] font-mono text-xs' : 'text-[#333D37] italic'
-        }`}>
+        <p className="text-sm leading-relaxed mb-4 text-[#333D37] italic">
           &ldquo;{review.text}&rdquo;
         </p>
       </div>
